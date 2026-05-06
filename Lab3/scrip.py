@@ -77,3 +77,21 @@ while True:
 
     else:
         print("Opción inválida")
+        
+        # Parte Haziel
+lista = [5, 2, 9, 1, 7, 3]
+
+print("Lista original:", lista)
+
+# ----------- MÉTODO BURBUJA -----------
+burbuja = lista.copy()
+
+for i in range(len(burbuja) - 1):
+    for j in range(len(burbuja) - i - 1):
+        if burbuja[j] > burbuja[j + 1]:
+            # Intercambio
+            temp = burbuja[j]
+            burbuja[j] = burbuja[j + 1]
+            burbuja[j + 1] = temp
+
+print("Ordenado con Burbuja:", burbuja)

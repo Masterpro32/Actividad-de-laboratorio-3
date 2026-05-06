@@ -95,3 +95,25 @@ for i in range(len(burbuja) - 1):
             burbuja[j + 1] = temp
 
 print("Ordenado con Burbuja:", burbuja)
+
+#PARTE VICTORIA
+#----------- MÉTODO SELECCIÓN -----------
+seleccion = lista.copy()
+
+for i in range(len(seleccion)):
+    min_index = i
+    for j in range(i + 1, len(seleccion)):
+        if seleccion[j] < seleccion[min_index]:
+            min_index = j
+
+Intercambio
+    temp = seleccion[i]
+    seleccion[i] = seleccion[min_index]
+    seleccion[min_index] = temp
+
+print("Ordenado con Selección:", seleccion)
+
+if burbuja == seleccion:
+    print("Ambos métodos dieron el mismo resultado.")
+else:
+    print("Los resultados son diferentes.")

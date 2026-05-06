@@ -35,3 +35,45 @@ for fila in matriz:
         suma += elemento
 
 print("\nLa suma total es:", suma)
+
+#PARTE DIEGO 
+
+lista = []
+
+while True:
+
+    print("\n--- MENÚ ---")
+    print("1. Insertar elemento al final")
+    print("2. Eliminar elemento por posición")
+    print("3. Buscar valor y mostrar posición")
+    print("4. Mostrar lista")
+    print("5. Salir")
+
+    opcion = int(input("Elige una opción: "))
+
+    if opcion == 1:
+        num = int(input("Ingrese un número: "))
+        lista.append(num)
+
+    elif opcion == 2:
+        pos = int(input("Ingrese la posición a eliminar: "))
+        if pos >= 0 and pos < len(lista):
+            lista.pop(pos)
+        else:
+            print("Posición inválida")
+
+    elif opcion == 3:
+        valor = int(input("Ingrese el valor a buscar: "))
+        if valor in lista:
+            print("Se encuentra en la posición:", lista.index(valor))
+        else:
+            print("No se encontró en la lista")
+
+    elif opcion == 4:
+        print("Lista actual:", lista)
+
+    elif opcion == 5:
+        break
+
+    else:
+        print("Opción inválida")
